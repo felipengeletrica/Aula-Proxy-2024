@@ -53,38 +53,38 @@ Trabalho Sockets que faz parte da aula de Redes.
 
 ***
 
-### 1) docker-compose up --build
+ ## 1) docker-compose up --build
 
- ## Respostas
+ ### Respostas
 
  ![Docker Compose](Trabalho_Proxy_Artur/01-up-compose.jpg)
 
- ### 2) docker-compose up --build -d
+ ## 2) docker-compose up --build -d
 
- ## Respostas
+ ### Respostas
 
  ![Docker Compose](Trabalho_Proxy_Artur/02-up-compose-d.jpg)
 
-  ### 3) Apache
+ ## 3) Apache
 
- ## Respostas
+ ### Respostas
 
  ![Grafana](Trabalho_Proxy_Artur/03-apache.jpg)
 
-  ### 4) Grafana
+ ## 4) Grafana
 
- ## Respostas
+ ### Respostas
 
  ![Grafana](Trabalho_Proxy_Artur/03-1-grafana.jpg)
 
- ### 5) Traefik
+ ## 5) Traefik
 
- ## Respostas
+ ### Respostas
 
  ![Grafana](Trabalho_Proxy_Artur/04-traefik.jpg)
 
-  ### 6) Traefik
+ ## 6) Traefik
 
- ## Respostas
+ ### Respostas
 
  ![Grafana](Trabalho_Proxy_Artur/05-dokueiki.jpg)

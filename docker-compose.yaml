@@ -134,7 +134,7 @@ services:
       - "traefik.tcp.routers.mysql.service=mysql"
       - traefik.port=3306
   samba:
-    image: dperson/samba
+    image: dockurr/samba
     environment:
       TZ: 'EST5EDT'
     networks:
@@ -144,16 +144,20 @@ services:
       - "138:138/udp"
       - "139:139/tcp"
       - "445:445/tcp"
-    read_only: true
+    read_only: false    
     tmpfs:
       - /tmp
     restart: unless-stopped
     stdin_open: true
     tty: true
     volumes:
-      - /mnt:/mnt:z
-      - /mnt2:/mnt2:z
-    command: '-s "Mount;/mnt" -s "Guga Volume;/mnt2;yes;no;no;fundatec" -u "fundatec;fundatec" -p'
+      - /mnt:/mnt
+    labels:
+      - traefik.tcp.routers.smb.rule=Host(`guga.localhost`)
+      - traefik.tcp.routers.smb.tls=true
+      - traefik.tcp.routers.smb.tls.certresolver=letsencrypt
+      - "traefik.tcp.routers.smb.service=samba"
+    command: '-s "Guga Docs;/home/tecnico/Documentos;yes;yes;yes;yes" -u "fundatec;fundatec" -p'
 
 
 
@@ -161,7 +165,7 @@ volumes:
   grafana_data:
   dokuwiki_data:
   mysql_data:
-
+  samba_data:
 
 networks:
   web:

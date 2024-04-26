@@ -1,44 +1,24 @@
-# Projeto PROXY reverso  (DIDÁTICO PARA O USO NAS AULAS DE REDES DE COMPUTADORES)
+![Print1](imagens/1.PNG)
+No primeiro print usamos o comando "docker-compose up --build" que é um comando usado com o Docker Compose para iniciar serviços definidos em um arquivo docker-compose.yml, construindo novas imagens Docker para os serviços antes de iniciar os contêineres. Isso garante que as últimas versões do código do aplicativo e suas dependências sejam usadas.
 
- Utilizando o Traefik para servidor Apache, Grafana e monitoramento utilizando o dashboard próprio do Traefik.
-    
-Este projeto utiliza Docker facilitando a implantação (deploy) dos serviços. 
- ***
+Em seguida executamos o comando "docker-compose up --build -d" que inicia os serviços definidos em um arquivo docker-compose.yml, construindo novas imagens Docker para esses serviços e executando os contêineres em segundo plano.
 
- ## Implantação dos serviços
- Abrir o terminal e execute os seguintes comandos:
+![Print3](imagens/3.PNG)
 
-Construindo e excutando os serviços (pressione ctrl+c para cencelar):
+Após as primeiras etapas utilizamos o comando "docker network create web" para corrigirmos o erro "network web not found.
 
- > $ docker-compose up --build
+Comando "docker network create web" cria uma nova rede chamada "web" no Docker. Isso permite que os contêineres que estão conectados a essa rede se comuniquem entre si de forma isolada.
 
- Utilize -d para dar um "detach" rodar o serviço na máquina
+Depois executamos novamente o primeiro comando, e dessa vez nao apresenta o erro citado anteriormente.
 
-> $ docker-compose up --build -d
+![Print4](imagens/4.PNG)
 
-Parando serviços: 
-> $ docker-compose stop
+Aqui temos o endereço "http://apache.localhost/" funcionando em localhost.
 
-Removendo serviços: 
-> $ docker-compose rm
-***
+![Print5](imagens/5.PNG)
 
- ## Testando os serviços
+Aqui o endereço "http://grafana.localhost/" funcionando em localhost.
 
-Utilize o navegador web e digite a seguinte url:
+![Print6](imagens/6.PNG)
 
-> http://apache.localhost
-
- ![Testando o Apache](doc/apache.png) 
-
- > http://grafana.localhost
-
- ![Testando o Grafana](doc/grafana.png) 
-
-  > http://dashboard.localhost
-
- ![Testando o DocuWiki](doc/DocuWiki.png) 
-
-  > http://dashboard.localhost
-
- ![Testando o Traefik](doc/dashboard.png) 
+Aqui o endereço "http://dashboard.localhost/" funcionando em localhost.

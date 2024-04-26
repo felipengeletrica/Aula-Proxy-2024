@@ -153,7 +153,7 @@ services:
     volumes:
       - /mnt:/mnt:z
       - /mnt2:/mnt2:z
-    command: '-s "Mount;/mnt" -s "Bobs Volume;/mnt2;yes;no;no;bob" -u "fundatec;fundatec" -p'
+    command: '-s "Mount;/mnt" -s "Guga Volume;/mnt2;yes;no;no;fundatec" -u "fundatec;fundatec" -p'
 
 
 
@@ -161,7 +161,7 @@ volumes:
   grafana_data:
   dokuwiki_data:
   mysql_data:
-  
+
 
 networks:
   web:

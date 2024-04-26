@@ -42,3 +42,49 @@ Utilize o navegador web e digite a seguinte url:
   > http://dashboard.localhost
 
  ![Testando o Traefik](doc/dashboard.png) 
+
+# TRABALHO PROXY 
+
+Trabalho Sockets que faz parte da aula de Redes.
+
+#### Aluno: Artur Bazzanella Christmann
+#### Professor: Felipe Vargas
+#### Turma: TI23
+
+***
+
+### 1) docker-compose up --build
+
+ ## Respostas
+
+ ![Docker Compose](Trabalho_Proxy_Artur/01-up-compose.jpg)
+
+ ### 2) docker-compose up --build -d
+
+ ## Respostas
+
+ ![Docker Compose](Trabalho_Proxy_Artur/02-up-compose-d.jpg)
+
+  ### 3) Apache
+
+ ## Respostas
+
+ ![Grafana](Trabalho_Proxy_Artur/03-apache.jpg)
+
+  ### 4) Grafana
+
+ ## Respostas
+
+ ![Grafana](Trabalho_Proxy_Artur/03-1-grafana.jpg)
+
+ ### 5) Traefik
+
+ ## Respostas
+
+ ![Grafana](Trabalho_Proxy_Artur/04-traefik.jpg)
+
+  ### 6) Traefik
+
+ ## Respostas
+
+ ![Grafana](Trabalho_Proxy_Artur/05-dokueiki.jpg)

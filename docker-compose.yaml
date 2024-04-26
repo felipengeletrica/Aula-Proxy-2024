@@ -107,6 +107,25 @@ services:
       - GF_SERVER_HTTP_PORT=3000
     restart: unless-stopped
 
+    services:
+    backend:
+        image: backoffice-backend
+        ports:
+            - "80:80"
+    database:
+        image: backoffice-db
+        ports:
+            - "3306:3036"
+        environment:
+            MYSQL_ROOT_PASSWORD: RootPassword
+            MYSQL_DATABASE: Backoffice
+            MYSQL_USER: MainUser
+            MYSQL_PASSWORD: MainPassword
+        volumes:
+            db-volume:/var/lib/mysql
+volumes:
+    db-volume:
+
 volumes:
   grafana_data:
   dokuwiki_data:

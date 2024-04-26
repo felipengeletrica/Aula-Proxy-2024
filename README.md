@@ -41,7 +41,7 @@ Este projeto utiliza Docker facilitando a implantação (deploy) dos serviços.
 
  ![Grafana](Trabalho_Proxy_Artur/04-traefik.jpg)
 
- ## 6) Traefik
+ ## 6) Traefik 
 
  ### Respostas
 

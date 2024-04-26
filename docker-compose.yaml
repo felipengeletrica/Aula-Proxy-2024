@@ -1,6 +1,20 @@
 version: '3'
 services:
 
+samba:
+  image: dperson/samba
+  container_name: samba
+  ports:
+    - "139:139"
+    - "445:445"
+  volumes:
+    - ./samba:/mount
+  environment:
+    - USERNAME=vitor
+    - PASSWORD=fundatec
+    - SHARE=myshare:/mount
+
+
   traefik:
       image: "traefik:v2.6.6"
       container_name: "traefik-network"

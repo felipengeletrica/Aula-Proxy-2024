@@ -27,18 +27,18 @@ Removendo serviços:
 
 Utilize o navegador web e digite a seguinte url:
 
-> http://apache.localhost
+> https://guga.localhost/
 
- ![Testando o Apache](doc/apache.png) 
+ ![Testando o Apache](doc/Proxy1_Apache.png) 
 
- > http://grafana.localhost
+ > https://gugafana.localhost/
 
- ![Testando o Grafana](doc/grafana.png) 
+ ![Testando o Grafana](doc/Proxy3_grafana.png) 
 
-  > http://dashboard.localhost
+  > http://gugawiki.localhost
 
- ![Testando o DocuWiki](doc/DocuWiki.png) 
+ ![Testando o DocuWiki](doc/Proxy2_Wiki.png) 
 
-  > http://dashboard.localhost
+  > http://gugaboard.localhost
 
- ![Testando o Traefik](doc/dashboard.png) 
+ ![Testando o Traefik](doc/Proxy1_Board.png) 

@@ -25,7 +25,7 @@ services:
             - "./acme.json:/acme.json"
       labels:
             # Dashboard
-            - "traefik.http.routers.traefik.rule=Host(`dashboard.localhost`)"
+            - "traefik.http.routers.traefik.rule=Host(`gugaboard.localhost`)"
             - "traefik.http.routers.traefik.service=api@internal"
             - "traefik.http.routers.traefik.tls.certresolver=letsencrypt"
             - "traefik.http.routers.traefik.entrypoints=websecure"
@@ -61,7 +61,7 @@ services:
       - ./app:/app
     
     labels:
-       - traefik.http.routers.apache1.rule=Host(`apache1.localhost`)
+       - traefik.http.routers.apache1.rule=Host(`guga.localhost`)
        - traefik.http.routers.apache1.tls=true
        - traefik.http.routers.apache1.tls.certresolver=letsencryp
        - traefik.port=8081
@@ -79,7 +79,7 @@ services:
       - 'dokuwiki_data:/bitnami/dokuwiki'
 
     labels:
-       - traefik.http.routers.dokuwiki.rule=Host(`dokuwiki.localhost`)
+       - traefik.http.routers.dokuwiki.rule=Host(`dogugawiki.localhost`)
        - traefik.http.routers.dokuwiki.tls=true
        - traefik.http.routers.dokuwiki.tls.certresolver=letsencryp
        - traefik.port=8082
@@ -94,7 +94,7 @@ services:
     ports:
       - 3000:3000
     labels:
-      - traefik.http.routers.grafana.rule=Host(`grafana.localhost`)
+      - traefik.http.routers.grafana.rule=Host(`gugafana.localhost`)
       - traefik.http.routers.grafana.tls=true
       - traefik.http.routers.grafana.tls.certresolver=letsencrypt
       - traefik.port=3000
@@ -128,16 +128,40 @@ services:
     volumes:
       - mysql_data:/var/lib/mysql
     labels:
-      - traefik.tcp.routers.mysql.rule=Host(`mysql.localhost`)
+      - traefik.tcp.routers.mysql.rule=Host(`myguga.localhost`)
       - traefik.tcp.routers.mysql.tls=true
       - traefik.tcp.routers.mysql.tls.certresolver=letsencrypt
       - "traefik.tcp.routers.mysql.service=mysql"
       - traefik.port=3306
+  samba:
+    image: dperson/samba
+    environment:
+      TZ: 'EST5EDT'
+    networks:
+      - default
+    ports:
+      - "137:137/udp"
+      - "138:138/udp"
+      - "139:139/tcp"
+      - "445:445/tcp"
+    read_only: true
+    tmpfs:
+      - /tmp
+    restart: unless-stopped
+    stdin_open: true
+    tty: true
+    volumes:
+      - /mnt:/mnt:z
+      - /mnt2:/mnt2:z
+    command: '-s "Mount;/mnt" -s "Bobs Volume;/mnt2;yes;no;no;bob" -u "fundatec;fundatec" -p'
+
+
 
 volumes:
   grafana_data:
   dokuwiki_data:
   mysql_data:
+  
 
 networks:
   web:

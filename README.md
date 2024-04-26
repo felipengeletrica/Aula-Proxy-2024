@@ -17,7 +17,7 @@ Documente com print e coloque aqui as respostas
 ***
 
 #### Resposta 1:
-Docker com imagem dos serviços: db, grafana, dokuwiki samba, traefik e apache.
+Docker com imagem dos serviços: DB, Grafana, Dokuwiki, Samba, Traefik e Apache.
 
 #### Print Screem:
 

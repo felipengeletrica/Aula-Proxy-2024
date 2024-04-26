@@ -1,0 +1,146 @@
+version: '3'
+services:
+
+  traefik:
+      image: "traefik:v2.6.6"
+      container_name: "traefik-network"
+      command:
+      - --entrypoints.web.address=:80
+      - --entrypoints.websecure.address=:443
+      - --providers.docker
+      - --api
+      - --log.level=DEBUG
+      - --certificatesresolvers.letsencrypt.acme.email=felipeng.eletrica@gmail.com
+      - --certificatesresolvers.letsencrypt.acme.storage=/acme.json
+      - --certificatesresolvers.letsencrypt.acme.tlschallenge=true
+      ports:
+        - "80:80"
+        - "443:443"
+      networks:
+        - internal
+        - web
+
+      volumes:
+            - "/var/run/docker.sock:/var/run/docker.sock:ro"
+            - "./acme.json:/acme.json"
+      labels:
+            # Dashboard
+            - "traefik.http.routers.traefik.rule=Host(`dashboard.localhost`)"
+            - "traefik.http.routers.traefik.service=api@internal"
+            - "traefik.http.routers.traefik.tls.certresolver=letsencrypt"
+            - "traefik.http.routers.traefik.entrypoints=websecure"
+            - "traefik.http.routers.http-catchall.rule=hostregexp(`{host:.+}`)"
+            - "traefik.http.routers.http-catchall.entrypoints=web"
+            - "traefik.http.routers.http-catchall.middlewares=redirect-to-https"
+            - "traefik.http.middlewares.redirect-to-https.redirectscheme.scheme=https"
+
+  apache:
+    image: 'bitnami/apache:latest'
+    container_name: apache-network
+    ports:
+      - '8080:8080'
+    volumes:
+      - ./app:/app
+    
+    labels:
+       - traefik.http.routers.apache.rule=Host(`apache.localhost`)
+       - traefik.http.routers.apache.tls=true
+       - traefik.http.routers.apache.tls.certresolver=letsencryp
+       - traefik.port=8080
+    networks:
+      - internal
+      - web
+    restart: unless-stopped
+
+  apache1:
+    image: 'bitnami/apache:latest'
+    container_name: apache-network1
+    ports:
+      - '8081:8081'
+    volumes:
+      - ./app:/app
+    
+    labels:
+       - traefik.http.routers.apache1.rule=Host(`apache1.localhost`)
+       - traefik.http.routers.apache1.tls=true
+       - traefik.http.routers.apache1.tls.certresolver=letsencryp
+       - traefik.port=8081
+    networks:
+      - internal
+      - web
+    restart: unless-stopped
+
+  dokuwiki:
+    image: docker.io/bitnami/dokuwiki:20200729
+    ports:
+      - '8082:8082'
+      - '8443:8443'
+    volumes:
+      - 'dokuwiki_data:/bitnami/dokuwiki'
+
+    labels:
+       - traefik.http.routers.dokuwiki.rule=Host(`dokuwiki.localhost`)
+       - traefik.http.routers.dokuwiki.tls=true
+       - traefik.http.routers.dokuwiki.tls.certresolver=letsencryp
+       - traefik.port=8082
+    networks:
+      - internal
+      - web
+    restart: unless-stopped
+
+  grafana:
+    image: grafana/grafana:latest
+    container_name: grafana
+    ports:
+      - 3000:3000
+    labels:
+      - traefik.http.routers.grafana.rule=Host(`grafana.localhost`)
+      - traefik.http.routers.grafana.tls=true
+      - traefik.http.routers.grafana.tls.certresolver=letsencrypt
+      - traefik.port=3000
+
+    networks:
+      - internal
+      - web
+
+    environment: 
+      - GF_SERVER_HTTP_PORT=3000
+    restart: unless-stopped
+
+  db:
+    image: mysql
+    restart: always
+    environment:
+      MYSQL_DATABASE: 'db'
+      # So you don't have to use root, but you can if you like
+      MYSQL_USER: 'user'
+      # You can use whatever password you like
+      MYSQL_PASSWORD: 'password'
+      # Password for root access
+      MYSQL_ROOT_PASSWORD: 'password'
+    ports:
+      # <Port exposed> : <MySQL Port running inside container>
+      - '3306:3306'
+    expose:
+      # Opens port 3306 on the container
+      - '3306'
+      # Where our data will be persisted
+    volumes:
+      - mysql_data:/var/lib/mysql
+    labels:
+      - traefik.tcp.routers.mysql.rule=Host(`mysql.localhost`)
+      - traefik.tcp.routers.mysql.tls=true
+      - traefik.tcp.routers.mysql.tls.certresolver=letsencrypt
+      - "traefik.tcp.routers.mysql.service=mysql"
+      - traefik.port=3306
+
+volumes:
+  grafana_data:
+  dokuwiki_data:
+  mysql_data:
+
+networks:
+  web:
+    external: true
+  internal:
+    external: false

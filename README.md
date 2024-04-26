@@ -1,8 +1,71 @@
-# Projeto PROXY reverso  (DIDÁTICO PARA O USO NAS AULAS DE REDES DE COMPUTADORES)
+# Projeto PROXY reverso 
+# (DIDÁTICO PARA O USO NAS AULAS DE REDES DE COMPUTADORES)
 
- Utilizando o Traefik para servidor Apache, Grafana e monitoramento utilizando o dashboard próprio do Traefik.
+Utilizando o Traefik para servidor Apache, Grafana e monitoramento utilizando o dashboard próprio do Traefik.
     
-Este projeto utiliza Docker facilitando a implantação (deploy) dos serviços. 
+Este projeto utiliza Docker facilitando a implantação (deploy) dos serviços.
+
+
+#### Aluno: Artur Bazzanella Christmann
+#### Professor: Felipe Vargas
+#### Turma: TI23
+
+### Sobre o trabalho
+
+Documente com print e coloque aqui as respostas
+
+***
+
+#### Resposta 1:
+Docker com imagem dos serviços: db, grafana, dokuwiki samba, traefik e apache.
+
+#### Print Screem:
+
+![Docker](Trabalho_Artur/01.jpg)
+
+#### Resposta 2:
+
+Apache.
+
+#### Print Screem:
+
+![Apache](Trabalho_Artur/02.jpg)
+
+#### Resposta 3:
+
+Grafana.
+
+#### Print Screem:
+
+![Grafana](Trabalho_Artur/03.jpg)
+
+#### Resposta 4:
+
+Traefik.
+
+#### Print Screem:
+
+![Traefik](Trabalho_Artur/04.jpg)
+
+#### Resposta 5:
+
+Dokuwiki.
+
+#### Print Screem:
+
+![Dokuwiki](Trabalho_Artur/05.jpg)
+
+#### Resposta 6:
+
+Samba.
+
+#### Print Screem:
+
+![Samba](Trabalho_Artur/06.jpg)
+
+
+## Thanks Teacher! ;-)
+
  ***
 
  ## Implantação dos serviços

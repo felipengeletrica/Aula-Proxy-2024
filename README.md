@@ -11,14 +11,14 @@ Comando "docker network create web" cria uma nova rede chamada "web" no Docker. 
 
 Depois executamos novamente o primeiro comando, e dessa vez nao apresenta o erro citado anteriormente.
 
-![Print4](imagens/4.PNG)
+![Print4](imagens/4.png)
 
 Aqui temos o endereço "http://apache.localhost/" funcionando em localhost.
 
-![Print5](imagens/5.PNG)
+![Print5](imagens/5.png)
 
 Aqui o endereço "http://grafana.localhost/" funcionando em localhost.
 
-![Print6](imagens/6.PNG)
+![Print6](imagens/6.png)
 
 Aqui o endereço "http://dashboard.localhost/" funcionando em localhost.

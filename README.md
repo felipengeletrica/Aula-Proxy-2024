@@ -48,8 +48,10 @@ Este projeto utiliza Docker facilitando a implantação (deploy) dos serviços.
  ![Grafana](Trabalho_Proxy_Artur/05-dokueiki.jpg)
 
 
-
  ***
+ ***
+
+ ## Instruções para execução
 
  ## Implantação dos serviços
  Abrir o terminal e execute os seguintes comandos:

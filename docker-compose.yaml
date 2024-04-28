@@ -5,8 +5,11 @@ services:
     image: docker.elastic.co/elasticsearch/elasticsearch:7.16.3
     container_name: elasticsearch
     environment:
+      - node.name=crud_node
+      - cluster.name=elastic_crash_course
       - discovery.type=single-node
       - xpack.security.enabled=true
+      - xpack.security.authc.api_key.enabled=true
       - "ELASTIC_PASSWORD=123456"
       
     ports:

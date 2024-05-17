@@ -5,6 +5,41 @@
 Este projeto utiliza Docker facilitando a implantação (deploy) dos serviços. 
  ***
 
+## Trabalho Docker 
+
+# Ambiente Docker com imagens dos serviços: Grafana, Apache, Dokuwiki, Traefik, Nginx ,Gitlab.
+
+* Imagens Docker
+
+![Imagens Docker]()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
  ## Implantação dos serviços
  Abrir o terminal e execute os seguintes comandos:
 

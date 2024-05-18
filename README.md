@@ -42,3 +42,25 @@ Utilize o navegador web e digite a seguinte url:
   > http://dashboard.localhost
 
  ![Testando o Traefik](doc/dashboard.png) 
+
+ 
+
+## Serviços personalizados:
+
+> http://bassetti-apache.localhost
+![Testando o Apache](imagens/apache-bassetti.png) 
+
+> http://bassetti-traefik.localhost
+![Testando o Traefik](imagens/traefik-bassetti.png)
+
+> http://bassetti-apache1.localhost
+![Testando o Apache1](imagens/apache1-bassetti.png)
+
+> http://bassetti-dokuwiki.localhost
+![Testando o Dokuwiki](imagens/dokuwiki-bassetti.png)
+
+> http://bassetti-grafana.localhost
+![Testando o Grafana](imagens/grafana-bassetti.png)
+
+> http://linux.localhost
+![Testando o Samba](imagens/samba.png) 

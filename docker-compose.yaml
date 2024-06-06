@@ -151,7 +151,7 @@ services:
     stdin_open: true
     tty: true
     volumes:
-      - /mnt:/mnt
+      - /home:/home
     labels:
       - traefik.tcp.routers.smb.rule=Host(`guga.localhost`)
       - traefik.tcp.routers.smb.tls=true

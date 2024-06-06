@@ -14,7 +14,7 @@ OBS: Tive que utilizar o comando abaixo "docker network create web" para consegu
 Construindo e excutando os serviços (pressione ctrl+c para cencelar):
 
  > $ docker-compose up --build
-![Print8](/Screenshots/PRINT8.png)
+![PRINT8](/Screenshots/PRINT8.png)
 
  Utilize -d para dar um "detach" rodar o serviço na máquina
 

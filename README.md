@@ -9,13 +9,13 @@ e linha 97 como grafana.localhost.
 Após isso foram atualizados para:
 
 "vitor-traefik.localhost"
-![Testando o Apache](doc/traefik.png) 
+![Testando o Traefik](doc/traefik.png) 
 
 "vitor-apache.localhost"
 ![Testando o Apache](doc/apache.png) 
 
 "vitor-apache1.localhost"
-![Testando o Apache](doc/apache1.png) 
+![Testando o Apache1](doc/apache1.png) 
   
 "vitor-dokuwiki.localhost"
 ![Testando o DocuWiki](doc/docuWiki.png)

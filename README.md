@@ -41,3 +41,7 @@ Traefik
 * Todos os serviços rodando 
 
 ![Service](https://github.com/felipengeletrica/Aula-Proxy-2024/blob/Trabalho_Tharsila/doc/traefik.png?raw=true)
+
+* Parando os Serviços
+
+[Parando Serviço](https://github.com/felipengeletrica/Aula-Proxy-2024/blob/Trabalho_Tharsila/doc/stop.png?raw=true)

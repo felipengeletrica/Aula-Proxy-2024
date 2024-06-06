@@ -14,6 +14,8 @@ Este projeto utiliza Docker facilitando a implantação (deploy) dos serviços.
 
 ![Construindo](https://github.com/felipengeletrica/Aula-Proxy-2024/blob/Trabalho_Tharsila/doc/build.png?raw=true)
 
+* Rodar o serviço na máquina
+
 * Imagens Docker
 
 ![Imagens Docker](https://github.com/felipengeletrica/Aula-Proxy-2024/blob/Trabalho_Tharsila/doc/services.png?raw=true)

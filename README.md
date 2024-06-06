@@ -8,19 +8,29 @@ Este projeto utiliza Docker facilitando a implantação (deploy) dos serviços.
  ## Implantação dos serviços
  Abrir o terminal e execute os seguintes comandos:
 
+
+ OBS: Comando utilizado para resolver um problema de "network web declared as external, but could not be found",
+ ![comando solução](/print/print%20erro.png)
+
 Construindo e excutando os serviços (pressione ctrl+c para cencelar):
 
  > $ docker-compose up --build
+![1 comando](/comandos/1comando.png)
 
  Utilize -d para dar um "detach" rodar o serviço na máquina
 
 > $ docker-compose up --build -d
+![2 comando](/comandos/2comando.png)
+
 
 Parando serviços: 
 > $ docker-compose stop
+![3 comando](/comandos/3comando.png)
+
 
 Removendo serviços: 
 > $ docker-compose rm
+![4 comando](/comandos/4comando.png)
 ***
 
  ## Testando os serviços
@@ -29,16 +39,16 @@ Utilize o navegador web e digite a seguinte url:
 
 > http://apache.localhost
 
- ![Testando o Apache](doc/apache.png) 
+ ![print apache](/print/apache.png)
 
  > http://grafana.localhost
 
- ![Testando o Grafana](doc/grafana.png) 
+ ![print grafana](/print/grafana.png)
 
   > http://dashboard.localhost
 
- ![Testando o DocuWiki](doc/DocuWiki.png) 
+![print dokuwiki](/print/dokuwiki.png)
 
   > http://dashboard.localhost
 
- ![Testando o Traefik](doc/dashboard.png) 
+![print dashboard](/print/dashboard.png)

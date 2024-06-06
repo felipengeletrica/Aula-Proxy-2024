@@ -8,19 +8,27 @@ Este projeto utiliza Docker facilitando a implantação (deploy) dos serviços.
  ## Implantação dos serviços
  Abrir o terminal e execute os seguintes comandos:
 
+
+OBS: Tive que utilizar o comando abaixo "docker network create web" para conseguir dar sequência aos códigos.
+
 Construindo e excutando os serviços (pressione ctrl+c para cencelar):
 
  > $ docker-compose up --build
+![Print8](/Screenshots/PRINT8.png)
 
  Utilize -d para dar um "detach" rodar o serviço na máquina
 
 > $ docker-compose up --build -d
+![PRINT9](/Screenshots/PRINT9.png)
 
 Parando serviços: 
 > $ docker-compose stop
+![PRINT10](/Screenshots/PRINT10.png)
 
 Removendo serviços: 
 > $ docker-compose rm
+![PRINT11](/Screenshots/PRINT11.png)
+
 ***
 
  ## Testando os serviços
@@ -29,16 +37,16 @@ Utilize o navegador web e digite a seguinte url:
 
 > http://apache.localhost
 
- ![Testando o Apache](doc/apache.png) 
+![PRINT12](/Screenshots/PRINT12.png)
 
  > http://grafana.localhost
 
- ![Testando o Grafana](doc/grafana.png) 
+![PRINT13](/Screenshots/PRINT13.png)
 
   > http://dashboard.localhost
 
- ![Testando o DocuWiki](doc/DocuWiki.png) 
+![PRINT15](/Screenshots/PRINT15.png)
 
   > http://dashboard.localhost
 
- ![Testando o Traefik](doc/dashboard.png) 
+![PRINT14](/Screenshots/PRINT14.png)

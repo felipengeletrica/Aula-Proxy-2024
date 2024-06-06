@@ -37,11 +37,11 @@ Utilize o navegador web e digite a seguinte url:
 
 > http://apache.localhost
 
-![PRINT12](/Screenshots/PRINT12.png)
+![PRINT13](/Screenshots/PRINT13.png)
 
  > http://grafana.localhost
 
-![PRINT13](/Screenshots/PRINT13.png)
+![PRINT14](/Screenshots/PRINT14.png)
 
   > http://dashboard.localhost
 
@@ -49,4 +49,4 @@ Utilize o navegador web e digite a seguinte url:
 
   > http://dashboard.localhost
 
-![PRINT14](/Screenshots/PRINT14.png)
+![PRINT12](/Screenshots/PRINT12.png)

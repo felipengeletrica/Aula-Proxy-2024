@@ -42,3 +42,5 @@ Utilize o navegador web e digite a seguinte url:
   > https://vinicius-dokuwiki.localhost/
 
  ![Testando o Traefik](Fotos/dokuwikiVini.png) 
+
+ hbjwhouthOI2QHT

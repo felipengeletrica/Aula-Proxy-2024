@@ -45,3 +45,6 @@ Traefik
 * Parando os Serviços
 
 ![Parando Serviço](https://github.com/felipengeletrica/Aula-Proxy-2024/blob/Trabalho_Tharsila/doc/stop.png?raw=true)
+
+* Removendo Serviços 
+! [Removendo Serviço](https://github.com/felipengeletrica/Aula-Proxy-2024/blob/Trabalho_Tharsila/doc/remove.png?raw=true)

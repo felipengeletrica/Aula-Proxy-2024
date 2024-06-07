@@ -35,13 +35,13 @@ Utilize o navegador web e digite a seguinte url:
 
  ![Testando o Grafana](doc/grafana.png) 
 
-  > http://morgana-dashboard.localhost
+  > http://morgana-dokuwiki.localhost
 
- ![Testando o DocuWiki](doc/DocuWiki.png) 
+ ![Testando o DocuWiki](doc/docuWiki.png) 
 
   > http://dashboard.localhost
 
- ![Testando o Traefik](doc/dashboard.png) 
+ ![Testando o Traefik](doc/dashboard2.png) 
 
 Docker
 ![Print do Docker](doc/docker.png)

@@ -1,12 +1,14 @@
 # Projeto PROXY reverso  (DIDÁTICO PARA O USO NAS AULAS DE REDES DE COMPUTADORES)
+Primeiro passo foi abrir o terminal para clonar o código ao meu Vs code, executando os seguintes códigos
+( git clone https://github.com/felipengeletrica/Aula-Proxy-2024.git),
+(cd Aula-Proxy-2024),
+(docker-compose up --build).
+Este passo a passo foi ultilizado somente para clonar para o meu Vs code.
 
- Utilizando o Traefik para servidor Apache, Grafana e monitoramento utilizando o dashboard próprio do Traefik.
-    
-Este projeto utiliza Docker facilitando a implantação (deploy) dos serviços. 
- ***
+Após, instalei o Docker Desktop na minha maquina.
 
  ## Implantação dos serviços
- Abrir o terminal e execute os seguintes comandos:
+ Abra o terminal e execute os seguintes comandos:
 
 Construindo e excutando os serviços (pressione ctrl+c para cencelar):
 
@@ -21,24 +23,19 @@ Parando serviços:
 
 Removendo serviços: 
 > $ docker-compose rm
+
+Na implantação dos serviços e fazendo o passo a passo dos códigos acima ocrreu o seguinte erro
+(network web declared as external, but could not be found),
+que foi corrigido da seguinte forma (docker network create web), é utilizado para criar uma nova rede personalizada chamada web. Este comando estabelece um ambiente de rede isolado onde contêineres podem se comunicar entre si.
 ***
 
- ## Testando os serviços
+Após, acessei cada localhost, para fazer a captura de tela de cada um deles, e a cada aceesso de localhost, era necessário abrir o terminal do próprio Vs code, e rodar os seguintes códigos 
+(docker-compose stop), (docker-compose up --build -d).
 
-Utilize o navegador web e digite a seguinte url:
 
-> http://apache.localhost
 
- ![Testando o Apache](doc/apache.png) 
 
- > http://grafana.localhost
-
- ![Testando o Grafana](doc/grafana.png) 
-
-  > http://dashboard.localhost
-
- ![Testando o DocuWiki](doc/DocuWiki.png) 
-
-  > http://dashboard.localhost
-
- ![Testando o Traefik](doc/dashboard.png) 
+![alt](IMG/Capturar.DETELA%201.PNG)
+![alt](IMG/Capturar.DETELA2.PNG)
+![alt](IMG/Capturar.DETELA3.PNG)
+![alt](IMG/Capturar.DETELA4.PNG)

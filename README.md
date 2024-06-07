@@ -27,18 +27,27 @@ Removendo serviços:
 
 Utilize o navegador web e digite a seguinte url:
 
-> http://apache.localhost
+> http://morgana-apache.localhost
 
  ![Testando o Apache](doc/apache.png) 
 
- > http://grafana.localhost
+ > http://morgana-grafana.localhost
 
  ![Testando o Grafana](doc/grafana.png) 
 
-  > http://dashboard.localhost
+  > http://morgana-dashboard.localhost
 
  ![Testando o DocuWiki](doc/DocuWiki.png) 
 
   > http://dashboard.localhost
 
  ![Testando o Traefik](doc/dashboard.png) 
+
+Docker
+![Print do Docker](doc/docker.png)
+
+![Print do Docker](doc/docker2.png)
+
+Erro caussado por não ter uma rede criada 
+![Problema](doc/problema.png)
+

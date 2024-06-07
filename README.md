@@ -23,44 +23,35 @@ Removendo serviços:
 > $ docker-compose rm
 ***
 
- ## Testando os serviços
 
-Utilize o navegador web e digite a seguinte url:
+## Testando os serviços personalizados:
 
-> http://apache.localhost
+Personalizei o nome das URLs estilizando com meu sobrenome "bassetti". Como por exemplo: "bassetti-traefik.localhost", ao acessar em um navegador, o proxy reverso (Traefik) irá redirecionar essa solicitação para o Traefik Dashboard, pelo caminho "/dashboard".
 
- ![Testando o Apache](doc/apache.png) 
-
- > http://grafana.localhost
-
- ![Testando o Grafana](doc/grafana.png) 
-
-  > http://dashboard.localhost
-
- ![Testando o DocuWiki](doc/DocuWiki.png) 
-
-  > http://dashboard.localhost
-
- ![Testando o Traefik](doc/dashboard.png) 
-
- 
-
-## Serviços personalizados:
 
 > http://bassetti-apache.localhost
+
 ![Testando o Apache](imagens/apache-bassetti.png) 
 
 > http://bassetti-traefik.localhost
+
+
 ![Testando o Traefik](imagens/traefik-bassetti.png)
 
 > http://bassetti-apache1.localhost
+
 ![Testando o Apache1](imagens/apache1-bassetti.png)
 
 > http://bassetti-dokuwiki.localhost
+
 ![Testando o Dokuwiki](imagens/dokuwiki-bassetti.png)
 
 > http://bassetti-grafana.localhost
+
 ![Testando o Grafana](imagens/grafana-bassetti.png)
 
 > http://linux.localhost
+
+Configuração de um serviço Samba usando o Docker Compose. O Samba é uma implementação de software usada para compartilhar arquivos e impressoras em uma rede entre sistemas Windows, Linux, entre outros sistemas operacionais.
+
 ![Testando o Samba](imagens/samba.png) 

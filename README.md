@@ -23,22 +23,35 @@ Removendo serviços:
 > $ docker-compose rm
 ***
 
+ ## Prints do terminal
+ 
+* Erro em tentar criar a rede
+ ![Erro em tentar criar a rede](<img/network web declared as external, but could not be found.PNG>)
+
+* Rede criada
+![Alt text](<img/rede criada .png>)
+
+* Serviços rodando
+ ![Alt text](<img/serviços rodando .png>)
+
+
+
  ## Testando os serviços
 
 Utilize o navegador web e digite a seguinte url:
 
-> http://apache.localhost
+> http://antonio_apache.localhost
 
- ![Testando o Apache](doc/apache.png) 
+ ![Apache](<img/it works!.png>)
 
- > http://grafana.localhost
+ > http://antonio_grafana.localhost
 
- ![Testando o Grafana](doc/grafana.png) 
+ ![Grafana](img/grafana.png)
 
-  > http://dashboard.localhost
+  > http://antonio_DokuWiki.localhost
 
- ![Testando o DocuWiki](doc/DocuWiki.png) 
+  ![DokuWiki](img/DokuWiki.png)
 
-  > http://dashboard.localhost
+  > http://antonio_dashboard.localhost
 
- ![Testando o Traefik](doc/dashboard.png) 
+   ![traefik](img/traefik.png)

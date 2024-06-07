@@ -25,7 +25,7 @@ services:
             - "./acme.json:/acme.json"
       labels:
             # Dashboard
-            - "traefik.http.routers.traefik.rule=Host(`dashboard.localhost`)"
+            - "traefik.http.routers.traefik.rule=Host(`vinicius-dashboard.localhost`)"
             - "traefik.http.routers.traefik.service=api@internal"
             - "traefik.http.routers.traefik.tls.certresolver=letsencrypt"
             - "traefik.http.routers.traefik.entrypoints=websecure"
@@ -43,7 +43,7 @@ services:
       - ./app:/app
     
     labels:
-       - traefik.http.routers.apache.rule=Host(`apache.localhost`)
+       - traefik.http.routers.apache.rule=Host(`vinicius-apache.localhost`)
        - traefik.http.routers.apache.tls=true
        - traefik.http.routers.apache.tls.certresolver=letsencryp
        - traefik.port=8080
@@ -61,7 +61,7 @@ services:
       - ./app:/app
     
     labels:
-       - traefik.http.routers.apache1.rule=Host(`apache1.localhost`)
+       - traefik.http.routers.apache1.rule=Host(`vinicius-apache1.localhost`)
        - traefik.http.routers.apache1.tls=true
        - traefik.http.routers.apache1.tls.certresolver=letsencryp
        - traefik.port=8081
@@ -79,7 +79,7 @@ services:
       - 'dokuwiki_data:/bitnami/dokuwiki'
 
     labels:
-       - traefik.http.routers.dokuwiki.rule=Host(`dokuwiki.localhost`)
+       - traefik.http.routers.dokuwiki.rule=Host(`vinicius-dokuwiki.localhost`)
        - traefik.http.routers.dokuwiki.tls=true
        - traefik.http.routers.dokuwiki.tls.certresolver=letsencryp
        - traefik.port=8082
@@ -94,7 +94,7 @@ services:
     ports:
       - 3000:3000
     labels:
-      - traefik.http.routers.grafana.rule=Host(`grafana.localhost`)
+      - traefik.http.routers.grafana.rule=Host(`vinicius-grafana.localhost`)
       - traefik.http.routers.grafana.tls=true
       - traefik.http.routers.grafana.tls.certresolver=letsencrypt
       - traefik.port=3000
@@ -120,10 +120,10 @@ services:
       MYSQL_ROOT_PASSWORD: 'password'
     ports:
       # <Port exposed> : <MySQL Port running inside container>
-      - '3306:3306'
+      - '3309:3309'
     expose:
       # Opens port 3306 on the container
-      - '3306'
+      - '3309'
       # Where our data will be persisted
     volumes:
       - mysql_data:/var/lib/mysql

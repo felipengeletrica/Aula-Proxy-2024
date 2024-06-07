@@ -27,18 +27,18 @@ Removendo serviços:
 
 Utilize o navegador web e digite a seguinte url:
 
-> http://apache.localhost
+>https://vinicius-apache1.localhost/
 
- ![Testando o Apache](doc/apache.png) 
+ ![Testando o Apache](Fotos/apacheVini.pngpng) 
 
- > http://grafana.localhost
+ > https://vinicius-grafana.localhost/login
 
- ![Testando o Grafana](doc/grafana.png) 
+ ![Testando o Grafana](Fotos/grafanaVini.png.png) 
 
-  > http://dashboard.localhost
+  > https://vinicius-dashboard.localhost/dashboard/#/
 
- ![Testando o DocuWiki](doc/DocuWiki.png) 
+ ![Testando o DocuWiki](Fotos/dashboardVini.png) 
 
-  > http://dashboard.localhost
+  > https://vinicius-dokuwiki.localhost/
 
- ![Testando o Traefik](doc/dashboard.png) 
+ ![Testando o Traefik](Fotos/dokuwikiVini.png) 

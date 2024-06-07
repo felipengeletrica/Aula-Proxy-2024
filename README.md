@@ -37,7 +37,7 @@ Utilize o navegador web e digite a seguinte url:
 
   > http://morgana-dokuwiki.localhost
 
- ![Testando o DocuWiki](doc/docuWiki.png) 
+ ![Testando o DocuWiki](doc/docuwiki.png) 
 
   > http://dashboard.localhost
 

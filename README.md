@@ -52,7 +52,7 @@ O sistema Wiki é muito versátil para documentar online diversos tipos de conte
 
  ![Testando o Traefik](doc/Proxy1_Board.png) 
 
- Um último serviço rodando neste docker é o Samba. O samba pelo sistema operacional Linux e com o ambiente gráfico Gnome deve ser acessado pelo servidor de arquivos Nautilus. Usando o Nautilus clicamos em Outros e digitamos o enderço configurado no docker-compose neste caso 
+ Um último serviço rodando neste docker é o Samba. O samba pelo sistema operacional Linux e com o ambiente gráfico Gnome deve ser acessado pelo servidor de arquivos Nautilus. Usando o Nautilus clicamos em Outros e digitamos o enderço configurado no docker-compose neste caso.
 
   > smb://guga-localhost 
 
@@ -61,3 +61,5 @@ O sistema Wiki é muito versátil para documentar online diversos tipos de conte
   Este endereço permitirá acesso a um volume chamado Data conforme print abaixo.
 
   ![Testando o Samba](doc/Proxy_samba2.png)
+
+Se for utilizado o esta configuração do Compose no sistema operacional Windows ele criará um objeto Linux na parte correspondente a Rede, dentro do WindowsExplorer.

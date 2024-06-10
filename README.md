@@ -139,7 +139,8 @@ networks:
     external: true
   internal:
     external: false
-    
+
+```
 ### 3. Rodar os containers com Docker Compose
 
 # 1. Abra o terminal do Windows (PowerShell ou CMD).
@@ -151,39 +152,17 @@ networks:
 
 Você pode verificar se os serviços estão rodando corretamente acessando os seguintes URLs no seu navegador:
 
-Traefik Dashboard: http://dashboard.localhost
-Apache: http://apache.localhost:8080
-Grafana: http://localhost:3000
-Dokuwiki: http://localhost:8081
+#### Traefik Dashboard: http://dashboard.localhost
+#### Apache: http://apache.localhost:8080
+#### Grafana: http://localhost:3000
+#### Dokuwiki: http://localhost:8081
 
 ### 5. Documentação com prints
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+#### Docker com imagem dos serviços: Apache, Grafana, Dokuwiki, Traefik, DB e Samba.
 
 #### Resposta 1:
+
 Docker com imagem dos serviços: Apache, Grafana, Dokuwiki, Traefik, DB e Samba.
 
 #### Print Screem:
@@ -232,6 +211,7 @@ Samba.
 
 
 ## Thanks Teacher! ;-)
+
 
  ***
 

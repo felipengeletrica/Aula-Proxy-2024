@@ -44,7 +44,7 @@ services:
       - --providers.docker
       - --api
       - --log.level=DEBUG
-      - --certificatesresolvers.letsencrypt.acme.email=felipeng.eletrica@gmail.com
+      - --certificatesresolvers.letsencrypt.acme.email=arturbc@gmail.com
       - --certificatesresolvers.letsencrypt.acme.storage=/acme.json
       - --certificatesresolvers.letsencrypt.acme.tlschallenge=true
     ports:
@@ -90,7 +90,7 @@ services:
       - '5445:445'
     environment:
       - TZ=America/Sao_Paulo
-      - USERS=artur:pixel
+      - USERS=artur:123456
       - SHARES=Compartilhamento:/compartilhamento:r:artur
     volumes:
       - ./compartilhamento:/compartilhamento
@@ -103,10 +103,10 @@ services:
     container_name: db-1
     restart: always
     environment:
-      MYSQL_ROOT_PASSWORD: root_password
-      MYSQL_DATABASE: my_database
-      MYSQL_USER: my_user
-      MYSQL_PASSWORD: my_password
+      MYSQL_ROOT_PASSWORD: 123456
+      MYSQL_DATABASE: database
+      MYSQL_USER: artur
+      MYSQL_PASSWORD: 123456
     ports:
       - "3307:3306"
     volumes:

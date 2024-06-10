@@ -18,8 +18,6 @@ TODO, Documentação e Print Screm das imagens executadas no Docker.
 
 ***
 
----
-
 ## Passo a passo para configurar o ambiente Docker
 
 ### 1. Instalar o Docker no Windows
@@ -143,19 +141,18 @@ networks:
 ```
 ### 3. Rodar os containers com Docker Compose
 
-# 1. Abra o terminal do Windows (PowerShell ou CMD).
-# 2. Navegue até o diretório onde você salvou o arquivo docker-compose.yaml.
-# 3. Execute o comando: docker-compose up -d
-
+1. Abra o terminal do Windows (PowerShell ou CMD).
+2. Navegue até o diretório onde você salvou o arquivo docker-compose.yaml.
+3. Execute o comando: docker-compose up -d
 
 ### 4. Verificar se os serviços estão rodando
 
 Você pode verificar se os serviços estão rodando corretamente acessando os seguintes URLs no seu navegador:
 
-#### Traefik Dashboard: http://dashboard.localhost
-#### Apache: http://apache.localhost:8080
-#### Grafana: http://localhost:3000
-#### Dokuwiki: http://localhost:8081
+  #### Traefik Dashboard: http://dashboard.localhost
+  #### Apache: http://apache.localhost:8080
+  #### Grafana: http://localhost:3000
+  #### Dokuwiki: http://localhost:8081
 
 ### 5. Documentação com prints
 

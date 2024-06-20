@@ -18,18 +18,18 @@ TODO, Documentação e Print Screm das imagens executadas no Docker.
 
 ***
 
-## Passo a passo para configurar o ambiente Docker
+## Passo a passo para configurar o ambiente Docker no Windows e Ubuntu
 
-## Windows
+# Windows
 
-### 1. Instalar o Docker no Windows
+### 1.1. Instalar o Docker no Windows
 
 1. Baixe o Docker Desktop para Windows no [site oficial](https://www.docker.com/products/docker-desktop).
 2. Execute o instalador e siga as instruções na tela.
 3. Após a instalação, reinicie o computador.
 4. Abra o Docker Desktop para confirmar que ele está funcionando corretamente.
 
-### 2. Configurar o arquivo `docker-compose.yaml`
+### 1.2. Configurar o arquivo `docker-compose.yaml`
 
 Crie um arquivo chamado `docker-compose.yaml` no diretório de sua preferência com o seguinte conteúdo:
 
@@ -141,13 +141,13 @@ networks:
     external: false
 
 ```
-### 3. Rodar os containers com Docker Compose
+### 1.3. Rodar os containers com Docker Compose
 
 1. Abra o terminal do Windows (PowerShell ou CMD).
 2. Navegue até o diretório onde você salvou o arquivo docker-compose.yaml.
 3. Execute o comando: docker-compose up -d
 
-### 4. Verificar se os serviços estão rodando
+### 1.4. Verificar se os serviços estão rodando
 
 Você pode verificar se os serviços estão rodando corretamente acessando os seguintes URLs no seu navegador:
 
@@ -156,7 +156,7 @@ Você pode verificar se os serviços estão rodando corretamente acessando os se
   #### - Grafana: http://localhost:3000
   #### - Dokuwiki: http://localhost:8081
 
-## 2. Ubuntu
+# Ubuntu
 
 ### 2. Instalar o Docker no Ubuntu
 

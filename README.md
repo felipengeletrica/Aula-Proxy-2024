@@ -24,14 +24,14 @@ TODO, Documentação e Print Screm das imagens executadas no Docker.
 
 ### 1.1. Instalar o Docker no Windows
 
-1. Baixe o Docker Desktop para Windows no [site oficial](https://www.docker.com/products/docker-desktop).
-2. Execute o instalador e siga as instruções na tela.
-3. Após a instalação, reinicie o computador.
-4. Abra o Docker Desktop para confirmar que ele está funcionando corretamente.
+    1.1.2 Baixe o Docker Desktop para Windows no [site oficial](https://www.docker.com/products/docker-desktop).
+    1.1.3 Execute o instalador e siga as instruções na tela.
+    1.1.4 Após a instalação, reinicie o computador.
+    1.1.5 Abra o Docker Desktop para confirmar que ele está funcionando corretamente.
 
 ### 1.2. Configurar o arquivo `docker-compose.yaml`
 
-Crie um arquivo chamado `docker-compose.yaml` no diretório de sua preferência com o seguinte conteúdo:
+  Crie um arquivo chamado `docker-compose.yaml` no diretório de sua preferência com o seguinte conteúdo:
 
 ```yaml
 version: '3'

@@ -324,6 +324,16 @@ networks:
 
       $ docker-compose up -d
 
+
+### 2.7.6 Verificar se os serviços estão rodando
+
+Você pode verificar se os serviços estão rodando corretamente acessando os seguintes URLs no seu navegador:
+
+  #### - Traefik Dashboard: http://dashboard.localhost
+  #### - Apache: http://apache.localhost:8080
+  #### - Grafana: http://localhost:3000
+  #### - Dokuwiki: http://localhost:8081
+
 # 3. Documentação com prints
 
 #### Docker com imagem dos serviços: Apache, Grafana, Dokuwiki, Traefik, DB e Samba.

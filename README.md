@@ -151,10 +151,10 @@ networks:
 
 Você pode verificar se os serviços estão rodando corretamente acessando os seguintes URLs no seu navegador:
 
-    #### - Traefik Dashboard: http://dashboard.localhost
-    #### - Apache: http://apache.localhost:8080
-    #### - Grafana: http://localhost:3000
-    #### - Dokuwiki: http://localhost:8081
+  #### - Traefik Dashboard: http://dashboard.localhost
+  #### - Apache: http://apache.localhost:8080
+  #### - Grafana: http://localhost:3000
+  #### - Dokuwiki: http://localhost:8081
 
 # Ubuntu
 

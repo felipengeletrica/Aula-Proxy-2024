@@ -20,7 +20,7 @@ TODO, Documentação e Print Screm das imagens executadas no Docker.
 
 ## Passo a passo para configurar o ambiente Docker no Windows e Ubuntu
 
-# Windows
+# 1. Windows
 
 ### 1.1. Instalar o Docker no Windows
 
@@ -143,18 +143,18 @@ networks:
 ```
 ### 1.3. Rodar os containers com Docker Compose
 
-1. Abra o terminal do Windows (PowerShell ou CMD).
-2. Navegue até o diretório onde você salvou o arquivo docker-compose.yaml.
-3. Execute o comando: docker-compose up -d
+    1.3.1. Abra o terminal do Windows (PowerShell ou CMD).
+    1.3.2. Navegue até o diretório onde você salvou o arquivo docker-compose.yaml.
+    1.3.3. Execute o comando: docker-compose up -d
 
 ### 1.4. Verificar se os serviços estão rodando
 
 Você pode verificar se os serviços estão rodando corretamente acessando os seguintes URLs no seu navegador:
 
-  #### - Traefik Dashboard: http://dashboard.localhost
-  #### - Apache: http://apache.localhost:8080
-  #### - Grafana: http://localhost:3000
-  #### - Dokuwiki: http://localhost:8081
+    #### - Traefik Dashboard: http://dashboard.localhost
+    #### - Apache: http://apache.localhost:8080
+    #### - Grafana: http://localhost:3000
+    #### - Dokuwiki: http://localhost:8081
 
 # Ubuntu
 
@@ -164,52 +164,52 @@ Você pode verificar se os serviços estão rodando corretamente acessando os se
 
 #### 2.1. Atualize a lista de pacotes:
 
-  $ sudo apt-get update
+      $ sudo apt-get update
 
 #### 2.2. Instale os pacotes necessários:
 
-  a. $ sudo apt-get install
-  b. $ sudo apt-get ca-certificates
-  c. $ sudo apt-get curl
-  d. $ sudo apt-get gnupg
-  e. $ sudo apt-get lsb-release
+      a. $ sudo apt-get install
+      b. $ sudo apt-get ca-certificates
+      c. $ sudo apt-get curl
+      d. $ sudo apt-get gnupg
+      e. $ sudo apt-get lsb-release
 
 #### 2.3. Adicione a chave GPG oficial do Docker:
 
-  $ sudo mkdir -p /etc/apt/keyrings
-  $ curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg
+      $ sudo mkdir -p /etc/apt/keyrings
+      $ curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg
 
 #### 2.4. Configure o repositório Docker:
 
-  $ echo "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu
-  $ (lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+      $ echo "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu
+      $ (lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
 
 #### 2.5. Instale o Docker Engine:
 
-  $ sudo apt-get update
-  $ sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
+      $ sudo apt-get update
+      $ sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
 
 #### 2.6. Verifique se a instalação foi bem-sucedida:
 
-  $ sudo docker run hello-world
+     $ sudo docker run hello-world
 
 #### 2.7. Instalar o Docker Compose:
 
 ##### 2.7.1 Baixe a versão estável mais recente do Docker Compose:
 
-  $ sudo curl -L "https://github.com/docker/compose/releases/download/2.17.3/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+     $ sudo curl -L "https://github.com/docker/compose/releases/download/2.17.3/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
 
 ##### 2.7.2 Aplique permissões de execução ao binário:
 
-  $ sudo chmod +x /usr/local/bin/docker-compose
+      $ sudo chmod +x /usr/local/bin/docker-compose
 
 ##### 2.7.3 Verifique a instalação:
 
-  $ docker-compose --version
+      $ docker-compose --version
 
 ##### 2.7.4 Configurar o arquivo docker-compose.yaml:
 
-  Crie um arquivo chamado `docker-compose.yaml` no diretório de sua preferência com o seguinte conteúdo:
+      2.7.4.1 Crie um arquivo chamado `docker-compose.yaml` no diretório de sua preferência com o seguinte conteúdo:
 
 ```yaml
 version: '3'
@@ -322,9 +322,9 @@ networks:
 
 ##### 2.7.5 Rodar os containers com Docker Compose
 
-  $ docker-compose up -d
+      $ docker-compose up -d
 
-### 5. Documentação com prints
+# 3. Documentação com prints
 
 #### Docker com imagem dos serviços: Apache, Grafana, Dokuwiki, Traefik, DB e Samba.
 

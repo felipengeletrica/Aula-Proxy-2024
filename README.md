@@ -48,6 +48,6 @@ Docker
 
 ![Print do Docker](doc/docker2.png)
 
-Erro caussado por não ter uma rede criada 
+Erro caussado por não ter uma rede criada e resolvido com o comando "docker network create web"
 ![Problema](doc/problema.png)
 

@@ -1,4 +1,4 @@
-# Projeto PROXY reverso  (DIDÁTICO PARA O USO NAS AULAS DE REDES DE COMPUTADORES)
+ # Projeto PROXY reverso  (DIDÁTICO PARA O USO NAS AULAS DE REDES DE COMPUTADORES)
 
  Utilizando o Traefik para servidor Apache, Grafana e monitoramento utilizando o dashboard próprio do Traefik.
     
@@ -22,23 +22,21 @@ Parando serviços:
 Removendo serviços: 
 > $ docker-compose rm
 ***
+ 
 
- ## Testando os serviços
+ 
+ > https://diogo-apache.localhost/
+![Apache](doc/apache.png)
 
-Utilize o navegador web e digite a seguinte url:
 
-> http://apache.localhost
+> https://diogo-grafana.localhost/login
+ [Grafana](doc/grafana.png)
 
- ![Testando o Apache](doc/apache.png) 
+ > https://diogo-dokuwiki.localhost/
+ [DocuWiki](doc/docuwiki.png)
 
- > http://grafana.localhost
+ > https://dashboard.localhost/dashboard/#/
+ [Trafik](doc/dashboard.png)
 
- ![Testando o Grafana](doc/grafana.png) 
-
-  > http://dashboard.localhost
-
- ![Testando o DocuWiki](doc/DocuWiki.png) 
-
-  > http://dashboard.localhost
-
- ![Testando o Traefik](doc/dashboard.png) 
+ > Docker
+[Docker](doc/docker.png)

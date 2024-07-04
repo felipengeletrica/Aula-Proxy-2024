@@ -22,21 +22,18 @@ Parando serviços:
 Removendo serviços: 
 > $ docker-compose rm
 ***
- 
-
- 
+  
  > https://diogo-apache.localhost/
 ![doc](doc/apache.png)
 
-
 > https://diogo-grafana.localhost/login
- [Grafana](doc/grafana.png)
+![Grafana](doc/grafana.png)
 
  > https://diogo-dokuwiki.localhost/
- [DocuWiki](doc/docuwiki.png)
+![DocuWiki](doc/docuwiki.png)
 
  > https://dashboard.localhost/dashboard/#/
- [Trafik](doc/dashboard.png)
+![Trafik](doc/dashboard.png)
 
  > Docker
-[Docker](doc/docker.png)
+![Docker](doc/docker.png)

@@ -56,13 +56,13 @@ services:
       - '5445:445'
     environment:
       - TZ=America/Sao_Paulo
-      - USERS=artur:pixel # Mude aqui
-      - SHARES=artur:/artur:r:w:artur # Mude aqui
+      - USERS=artur:pixel 
+      - SHARES=artur:/artur:r:w:artur 
     volumes:
-      - ./artur:/artur # Mude aqui
+      - ./artur:/artur
     labels:
       - "traefik.enable=true"
-      - "traefik.http.routers.samba.rule=Host(`samba-artur.localhost`)" # Mude aqui
+      - "traefik.http.routers.samba.rule=Host(`samba-artur.localhost`)" 
       - "traefik.http.routers.samba.entrypoints=web"
       - "traefik.http.services.samba.loadbalancer.server.port=445"
     networks:

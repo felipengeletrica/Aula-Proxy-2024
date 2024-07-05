@@ -386,6 +386,12 @@ Samba.
 
 ![Samba](Trabalho_Artur/06.jpg)
 
+#### Print Screem:
+
+(samba-artur.localhost)
+
+![Samba](Trabalho_Artur/07-samba-artur.localhost.jpg)
+
 
 ## Thanks Teacher! ;-)
 

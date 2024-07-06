@@ -187,17 +187,17 @@ docker-compose up -d
 
 Imagem do Docker:
 
-![Docker](doc/NewDocker.png)
+![Docker](doc/docker3.png)
 
 ## Passo 3:
 Entre nesse link:
 dashboard.localhost
 
-![Traefik](doc/Traefik.png)
-![Traefik2](doc/Traefik2.png)
+![Traefik](doc/Traefik0.png)
+![Traefik2](doc/Traefik1.png)
 
 ## Passo 4:
 Verificar se uma pasta foi criada:
-![Vscode](doc/VsCode.png)
+![Vscode](doc/Vs.png)
 
 

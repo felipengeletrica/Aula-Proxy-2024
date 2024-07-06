@@ -198,6 +198,7 @@ dashboard.localhost
 
 ## Passo 4:
 Verificar se uma pasta foi criada:
+
 ![Vscode](doc/Vs.png)
 
 

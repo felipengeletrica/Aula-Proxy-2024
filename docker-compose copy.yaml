@@ -1,73 +1,3 @@
-# Projeto PROXY reverso  (DIDÁTICO PARA O USO NAS AULAS DE REDES DE COMPUTADORES)
-
- Utilizando o Traefik para servidor Apache, Grafana e monitoramento utilizando o dashboard próprio do Traefik.
-    
-Este projeto utiliza Docker facilitando a implantação (deploy) dos serviços. 
- ***
-
- ## Implantação dos serviços
- Abrir o terminal e execute os seguintes comandos:
-
-Construindo e excutando os serviços (pressione ctrl+c para cencelar):
-
- > $ docker-compose up --build
-
- Utilize -d para dar um "detach" rodar o serviço na máquina
-
-> $ docker-compose up --build -d
-
-Parando serviços: 
-> $ docker-compose stop
-
-Removendo serviços: 
-> $ docker-compose rm
-***
-
- ## Testando os serviços
-
-Utilize o navegador web e digite a seguinte url:
-
-> http://morgana-apache.localhost
-
- ![Testando o Apache](doc/apache.png) 
-
- > http://morgana-grafana.localhost
-
- ![Testando o Grafana](doc/grafana.png) 
-
-  > http://morgana-dokuwiki.localhost
-
- ![Testando o DocuWiki](doc/DocuWiki2.png) 
-
-  > http://dashboard.localhost
-
- ![Testando o Traefik](doc/dashboard2.png) 
-
-Docker
-![Print do Docker](doc/docker.png)
-
-![Print do Docker](doc/docker2.png)
-
-Erro caussado por não ter uma rede criada 
-![Problema](doc/problema.png)
-
-## Trabalho Final
-
-# Configuração de Samba com Traefik como Proxy Reverso
-
-Este guia passo a passo descreve como configurar um servidor Samba acessível através de um subdomínio específico utilizando o Traefik como proxy reverso e Docker Compose.
-
-## Pré-requisitos
-
-1. Docker instalado na sua máquina.
-2. Docker Compose instalado na sua máquina.
-3. Acesso à internet para baixar imagens de contêiner.
-
-## Passo 1: Criar o Arquivo `docker-compose.yml`
-
-Crie um arquivo chamado `docker-compose.yml` com o seguinte conteúdo:
-
-```yaml
 version: '3'
 
 services:
@@ -80,7 +10,7 @@ services:
       - --providers.docker
       - --api
       - --log.level=DEBUG
-      - --certificatesresolvers.letsencrypt.acme.email=seu-email@example.com
+      - --certificatesresolvers.letsencrypt.acme.email=felipeng.eletrica@gmail.com
       - --certificatesresolvers.letsencrypt.acme.storage=/acme.json
       - --certificatesresolvers.letsencrypt.acme.tlschallenge=true
     ports:
@@ -127,13 +57,13 @@ services:
       - '5445:445'
     environment:
       - TZ=America/Sao_Paulo
-      - USERS=morgana:78945612
-      - SHARES=morgana:/mount:r:w:morgana
+      - USERS=morgana:78945612 
+      - SHARES=morgana:/mount:r:w:morgana 
     volumes:
       - /caminho/para/compartilhamento:/mount
     labels:
       - "traefik.enable=true"
-      - "traefik.http.routers.samba.rule=Host(`samba.morgana.localhost`)"
+      - "traefik.http.routers.samba.rule=Host(`samba-morgana.localhost`)" 
       - "traefik.http.routers.samba.entrypoints=websecure"
       - "traefik.http.routers.samba.tls.certresolver=letsencrypt"
       - "traefik.http.services.samba.loadbalancer.server.port=445"
@@ -180,23 +110,5 @@ networks:
   web:
     external: true
   internal:
-    external: false 
-```
-## Passo 2:     
-docker-compose up -d
-
-Imagem do Docker:
-
-![Docker](doc/NewDocker.png)
-
-## Passo 3:
-Entre nesse link:
-dashboard.localhost
-
-![Traefik](doc/Traefik.png)
-![Traefik2](doc/Traefik2.png)
-
-## Passo 4:
-Verificar se uma pasta foi criada:
-![Vscode](doc/VsCode.png)
+    external: false
 

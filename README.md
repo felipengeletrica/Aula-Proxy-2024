@@ -183,6 +183,7 @@ networks:
     external: false 
 ```
 ## Passo 2:     
+Usar o seguinte comando no terminal, para criar o Docker:
 docker-compose up -d
 
 Imagem do Docker:
